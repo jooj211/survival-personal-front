@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { TextInput } from "react-native";
 import { Link, Router } from "react-router-native";
 import { useFonts } from "expo-font";
@@ -77,16 +77,32 @@ export default function Login() {
 
         <View style={styles.buttons}>
           <View style={styles.button}>
+            <Button
+              title="              "
+              color="transparent"
+              onPress={() => alert("Login")}
+            />
             <Text
-              style={{ fontSize: 20, color: "white", fontFamily: "Montserrat" }}
+              style={{
+                fontSize: 20,
+                color: "white",
+                fontFamily: "Montserrat",
+                marginTop: -35,
+                marginBottom: 0,
+              }}
             >
               LOGIN
             </Text>
           </View>
 
           <View style={styles.button}>
+            <Button
+              title="              "
+              color="transparent"
+              onPress={() => this.props.navigation.navigate('Cadastro')}
+            />
             <Text
-              style={{ fontSize: 20, color: "white", fontFamily: "Montserrat" }}
+              style={{ fontSize: 20, color: "white", fontFamily: "Montserrat", marginTop: -35 }}
             >
               CADASTRAR
             </Text>
@@ -154,7 +170,9 @@ const styles = StyleSheet.create({
     margin: 10,
     width: "40%",
     alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "red",
+    cursor: "pointer",
   },
 });
 

@@ -1,3 +1,7 @@
 export default function Cadastro() {
-  return <View />;
+  return (
+    <View>
+      <Text>Cadastro</Text>
+    </View>
+  );
 }
