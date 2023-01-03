@@ -80,37 +80,27 @@ export default function Login() {
 
         <View style={styles.buttons}>
           <View style={styles.button}>
-            <Button
-              title="              "
-              color="transparent"
-              onPress={() => alert("Login")}
-            />
             <Text
               style={{
                 fontSize: 20,
                 color: "white",
                 fontFamily: "Montserrat",
-                marginTop: -35,
                 marginBottom: 0,
               }}
+              onClick={() => navigation.navigate("Welcome")}
             >
               LOGIN
             </Text>
           </View>
 
           <View style={styles.button}>
-            <Button
-              title="              "
-              color="white"
-              onPress={() => navigation.navigate("Cadastro")}
-            />
             <Text
               style={{
                 fontSize: 20,
                 color: "white",
                 fontFamily: "Montserrat",
-                marginTop: -35,
               }}
+              onClick={() => navigation.navigate("Cadastro")}
             >
               CADASTRAR
             </Text>
@@ -177,6 +167,7 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     width: "40%",
+    height: "70%",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "red",

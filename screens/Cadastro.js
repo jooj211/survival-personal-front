@@ -5,6 +5,7 @@ import { Link, Router } from "react-router-native";
 import { useFonts } from "expo-font";
 import MText from "../components/MText";
 import styled from "styled-components/native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Cadastro() {
   const [loaded] = useFonts({
@@ -14,6 +15,8 @@ export default function Cadastro() {
   if (!loaded) {
     return null;
   }
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -39,7 +42,6 @@ export default function Cadastro() {
               height: 40,
               borderColor: "gray",
               color: "white",
-              opacity: 0.5,
               padding: 5,
               borderBottomWidth: 1,
               borderRadius: 0,
@@ -47,7 +49,12 @@ export default function Cadastro() {
             }}
           />
           <Text
-            style={{ marginTop: 20, fontSize: 20, color: "white", fontFamily: "Montserrat" }}
+            style={{
+              marginTop: 20,
+              fontSize: 20,
+              color: "white",
+              fontFamily: "Montserrat",
+            }}
           >
             E-mail
           </Text>
@@ -56,7 +63,6 @@ export default function Cadastro() {
               height: 40,
               borderColor: "gray",
               color: "white",
-              opacity: 0.5,
               padding: 5,
               borderBottomWidth: 1,
               borderRadius: 0,
@@ -79,7 +85,6 @@ export default function Cadastro() {
               height: 40,
               borderColor: "gray",
               color: "white",
-              opacity: 0.5,
               padding: 5,
               borderBottomWidth: 1,
               borderRadius: 0,
@@ -104,7 +109,6 @@ export default function Cadastro() {
               height: 40,
               borderColor: "gray",
               color: "white",
-              opacity: 0.5,
               padding: 5,
               borderBottomWidth: 1,
               borderRadius: 0,
@@ -116,17 +120,12 @@ export default function Cadastro() {
         </View>
 
         <View style={styles.buttons}>
-
           <View style={styles.button}>
-            <Button
-              title="              "
-              color="transparent"
-              onPress={() => this.props.navigation.navigate('Welcome')}
-            />
             <Text
-              style={{ fontSize: 18, color: "white", fontFamily: "Montserrat", marginTop: -35 }}
+              style={{ fontSize: 20, color: "white", fontFamily: "Montserrat" }}
+              onClick={() => navigation.navigate("Login")}
             >
-              CONTINUAR
+              CADASTRAR
             </Text>
           </View>
         </View>
@@ -135,7 +134,7 @@ export default function Cadastro() {
           <Text
             style={{ fontSize: 18, color: "blue", fontFamily: "Montserrat" }}
           >
-            Já sou cadastrado
+            Professor? Cadastre aqui
           </Text>
         </View>
       </View>
@@ -189,7 +188,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     margin: 10,
-    width: "40%",
+    width: "50%",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "red",
