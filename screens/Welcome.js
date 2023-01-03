@@ -121,7 +121,7 @@ export default function Cadastro() {
             <Button
               title="              "
               color="transparent"
-              onPress={() => this.props.navigation.navigate('Welcome')}
+              onPress={() => this.props.navigation.navigate('Cadastro')}
             />
             <Text
               style={{ fontSize: 18, color: "white", fontFamily: "Montserrat", marginTop: -35 }}

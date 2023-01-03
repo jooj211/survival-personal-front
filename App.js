@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
+import Welcome from "./screens/Welcome";
 
 const Stack = createStackNavigator();
 
@@ -11,15 +12,21 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={Login}
           options={{ headerShown: false }}
-        />
+        /> */}
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Cadastro"
           component={Cadastro}
+          options={{ headerShown: false }}
+        /> */}
+
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

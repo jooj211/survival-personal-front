@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { TextInput } from "react-native";
 import { Link, Router } from "react-router-native";
 import { useFonts } from "expo-font";
+import { useNavigation } from "@react-navigation/native";
 import MText from "../components/MText";
 import styled from "styled-components/native";
 
@@ -14,6 +15,8 @@ export default function Login() {
   if (!loaded) {
     return null;
   }
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -98,11 +101,16 @@ export default function Login() {
           <View style={styles.button}>
             <Button
               title="              "
-              color="transparent"
-              onPress={() => this.props.navigation.navigate('Cadastro')}
+              color="white"
+              onPress={() => navigation.navigate("Cadastro")}
             />
             <Text
-              style={{ fontSize: 20, color: "white", fontFamily: "Montserrat", marginTop: -35 }}
+              style={{
+                fontSize: 20,
+                color: "white",
+                fontFamily: "Montserrat",
+                marginTop: -35,
+              }}
             >
               CADASTRAR
             </Text>
