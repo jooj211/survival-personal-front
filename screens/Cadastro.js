@@ -6,6 +6,7 @@ import { useFonts } from "expo-font";
 import MText from "../components/MText";
 import styled from "styled-components/native";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons } from "react-native-vector-icons";
 
 export default function Cadastro() {
   const [loaded] = useFonts({
@@ -20,6 +21,13 @@ export default function Cadastro() {
 
   return (
     <View style={styles.container}>
+        <MaterialIcons
+          name="arrow-back"
+          size={30}
+          color="white"
+          style={{ marginBottom: -30, zIndex: 1, position: "absolute", left: 20, top: 20 }}
+          onClick={() => navigation.navigate("Login")}
+        />
       <View style={styles.signup_container}>
         <View style={{ alignItems: "center" }}>
           <Text
