@@ -100,39 +100,73 @@ export default function Welcome() {
 
         <View style={styles.buttons}>
           <View style={styles.button}>
-            <Button
-              title="Calendário"
-              color="grey"
-              onPress={() => alert("Calendário")}
-              style={{ borderRadius: 25 }}
-            />
+            <Text
+              style={{
+                color: "white",
+                fontSize: 16,
+                borderWidth: 1,
+                borderColor: "grey",
+                borderRadius: 10,
+                padding: 10,
+                fontFamily: "Montserrat",
+                textAlign: "center",
+              }}
+            >
+              Calendário
+            </Text>
           </View>
 
           <View style={styles.button}>
-            <Button
-              title="Estatísticas"
-              color="grey"
-              onPress={() => alert("Estatísticas")}
-              style={{ borderRadius: 25 }}
-            />
+            <Text
+              style={{
+                color: "white",
+                fontSize: 16,
+                borderWidth: 1,
+                borderColor: "grey",
+                borderRadius: 10,
+                padding: 10,
+                fontFamily: "Montserrat",
+                textAlign: "center",
+              }}
+              onClick={() => navigation.navigate("Disciplina")}
+            >
+              Estatísticas
+            </Text>
           </View>
 
           <View style={styles.button}>
-            <Button
-              title="Grade"
-              color="grey"
-              onPress={() => alert("Grade de Horários")}
-              style={{ borderRadius: 25 }}
-            />
+            <Text
+              style={{
+                color: "white",
+                fontSize: 16,
+                borderWidth: 1,
+                borderColor: "grey",
+                borderRadius: 10,
+                padding: 10,
+                fontFamily: "Montserrat",
+                textAlign: "center",
+              }}
+            >
+              Grade
+            </Text>
           </View>
 
           <View style={styles.button}>
-            <Button
-              title="Gerenciamento"
-              color="grey"
-              onPress={() => alert("Gerenciamento")}
-              style={{ borderRadius: 25 }}
-            />
+            <Text
+              style={{
+                color: "white",
+                fontSize: 16,
+                borderWidth: 1,
+                borderColor: "grey",
+                borderRadius: 10,
+                padding: 10,
+                fontFamily: "Montserrat",
+                textAlign: "center",
+              }}
+              onClick={() => navigation.navigate("Adicionar")}
+            >
+              Gerenciamento
+            </Text>
           </View>
         </View>
       </View>

@@ -157,6 +157,7 @@ export default function Disciplina() {
             paddingTop: 18,
             borderWidth: 1,
           }}
+          onClick={() => navigation.navigate("Adicionar")}
         />
         <MaterialIcons
           name="home"

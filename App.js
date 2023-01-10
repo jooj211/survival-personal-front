@@ -6,6 +6,7 @@ import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
 import Welcome from "./screens/Welcome";
 import Disciplina from "./screens/Disciplina";
+import Adicionar from "./screens/Adicionar";
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,12 @@ export default function App() {
         <Stack.Screen
           name="Disciplina"
           component={Disciplina}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Adicionar"
+          component={Adicionar}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
