@@ -165,7 +165,7 @@ export default function Welcome() {
                 fontFamily: "Montserrat",
                 textAlign: "center",
               }}
-              onClick={() => navigation.navigate("Adicionar")}
+              onClick={() => navigation.navigate("Evento")}
             >
               Gerenciamento
             </Text>
