@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./screens/Login";
 import Cadastro from "./screens/Cadastro";
 import Welcome from "./screens/Welcome";
+import Disciplina from "./screens/Disciplina";
 
 const Stack = createStackNavigator();
 
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={Login}
           options={{ headerShown: false }}
@@ -28,6 +29,12 @@ export default function App() {
           name="Welcome"
           component={Welcome}
           options={{ headerShown: false }}
+        /> */}
+
+        <Stack.Screen
+          name="Disciplina"
+          component={Disciplina}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -37,8 +44,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#121212",
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  html: {
+    backgroundColor: "#121212",
   },
 });
