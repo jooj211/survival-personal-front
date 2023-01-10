@@ -111,6 +111,7 @@ export default function Welcome() {
                 fontFamily: "Montserrat",
                 textAlign: "center",
               }}
+              onClick={() => navigation.navigate("Calendar")}
             >
               Calendário
             </Text>
@@ -146,6 +147,7 @@ export default function Welcome() {
                 fontFamily: "Montserrat",
                 textAlign: "center",
               }}
+              onClick={() => navigation.navigate("Grid")}
             >
               Grade
             </Text>

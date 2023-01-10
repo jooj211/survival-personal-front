@@ -33,7 +33,7 @@ export default function Adicionar() {
           left: 20,
           top: 20,
         }}
-        onClick={() => navigation.navigate("Login")}
+        onClick={() => navigation.navigate("Welcome")}
       />
       <View style={styles.signup_container}>
         <View style={{ alignItems: "center" }}>

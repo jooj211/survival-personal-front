@@ -8,6 +8,8 @@ import Welcome from "./screens/Welcome";
 import Disciplina from "./screens/Disciplina";
 import Adicionar from "./screens/Adicionar";
 import Evento from "./screens/Evento";
+import Calendar from "./screens/Calendar";
+import Grid from "./screens/Grid";
 
 const Stack = createStackNavigator();
 
@@ -48,6 +50,18 @@ export default function App() {
         <Stack.Screen
           name="Evento"
           component={Evento}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Calendar"
+          component={Calendar}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Grid"
+          component={Grid}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

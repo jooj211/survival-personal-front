@@ -33,6 +33,7 @@ export default function Disciplina() {
           left: 20,
           top: 20,
         }}
+        onPress={() => navigation.navigate("Welcome")}
       />
       <MaterialIcons
         name="arrow-forward"
