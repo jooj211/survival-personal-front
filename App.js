@@ -7,6 +7,7 @@ import Cadastro from "./screens/Cadastro";
 import Welcome from "./screens/Welcome";
 import Disciplina from "./screens/Disciplina";
 import Adicionar from "./screens/Adicionar";
+import Evento from "./screens/Evento";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={Login}
           options={{ headerShown: false }}
@@ -41,6 +42,12 @@ export default function App() {
         <Stack.Screen
           name="Adicionar"
           component={Adicionar}
+          options={{ headerShown: false }}
+        /> */}
+
+        <Stack.Screen
+          name="Evento"
+          component={Evento}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
