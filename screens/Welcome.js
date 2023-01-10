@@ -5,6 +5,7 @@ import { Link, Router } from "react-router-native";
 import { useFonts } from "expo-font";
 import MText from "../components/MText";
 import styled from "styled-components/native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Welcome() {
   const [loaded] = useFonts({
@@ -14,6 +15,8 @@ export default function Welcome() {
   if (!loaded) {
     return null;
   }
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -45,10 +48,13 @@ export default function Welcome() {
               </View>
 
               <View style={styles.schedule_events}>
-                <View style={styles.schedule_event}>
+                <View
+                  style={styles.schedule_event}
+                  onClick={() => navigation.navigate("Disciplina")}
+                >
                   <View style={styles.event_container}>
                     <Text style={styles.event_title}>TVC 1</Text>
-                    <Text style={styles.event_info}>Álgebra Linear - 30pt</Text>
+                    <Text style={styles.event_info}>Grafos - 30pt</Text>
                   </View>
                 </View>
               </View>

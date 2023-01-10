@@ -169,6 +169,7 @@ export default function Disciplina() {
             paddingTop: 18,
             borderWidth: 1,
           }}
+          onClick={() => navigation.navigate("Welcome")}
         />
         <MaterialIcons
           name="calendar-today"
@@ -220,7 +221,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     textAlign: "center",
-    backgroundColor: "#121212"
+    backgroundColor: "#121212",
   },
 
   image_container: {
