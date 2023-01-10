@@ -5,8 +5,28 @@ import { Link, Router } from "react-router-native";
 import { useFonts } from "expo-font";
 import MText from "../components/MText";
 import styled from "styled-components/native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Welcome() {
+  const actualDate = new Date();
+  const actualMonth =
+    actualDate
+      .toLocaleString("default", { month: "long" })
+      .charAt(0)
+      .toUpperCase() +
+    actualDate.toLocaleString("default", { month: "long" }).slice(1);
+  const actualDay = actualDate.getDate();
+
+  const sevenDays = new Date();
+  sevenDays.setDate(sevenDays.getDate() + 7);
+  const sevenMonth =
+    sevenDays
+      .toLocaleDateString("default", { month: "long" })
+      .charAt(0)
+      .toUpperCase() +
+    sevenDays.toLocaleDateString("default", { month: "long" }).slice(1);
+  const sevenDay = sevenDays.getDate();
+
   const [loaded] = useFonts({
     Montserrat: require("../assets/fonts/montserrat.ttf"),
   });
@@ -14,6 +34,8 @@ export default function Welcome() {
   if (!loaded) {
     return null;
   }
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -40,8 +62,8 @@ export default function Welcome() {
           <View style={styles.schedule}>
             <View style={styles.schedule_line}>
               <View style={styles.date}>
-                <Text style={styles.date_month}>Setembro</Text>
-                <Text style={styles.date_day}>30</Text>
+                <Text style={styles.date_month}>{actualMonth}</Text>
+                <Text style={styles.date_day}>{actualDay}</Text>
               </View>
 
               <View style={styles.schedule_events}>
@@ -56,8 +78,8 @@ export default function Welcome() {
 
             <View style={styles.schedule_line}>
               <View style={styles.date}>
-                <Text style={styles.date_month}>Outubro</Text>
-                <Text style={styles.date_day}>02</Text>
+                <Text style={styles.date_month}>{sevenMonth}</Text>
+                <Text style={styles.date_day}>{sevenDay}</Text>
               </View>
 
               <View style={styles.schedule_events}>
@@ -97,7 +119,7 @@ export default function Welcome() {
             <Button
               title="Calendário"
               color="grey"
-              onPress={() => alert("Calendário")}
+              onPress={() => navigation.navigate("Calendar")}
               style={{ borderRadius: 25 }}
             />
           </View>
@@ -115,7 +137,7 @@ export default function Welcome() {
             <Button
               title="Grade"
               color="grey"
-              onPress={() => alert("Grade de Horários")}
+              onPress={() => navigation.navigate("Grid")}
               style={{ borderRadius: 25 }}
             />
           </View>
